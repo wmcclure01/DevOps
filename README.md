@@ -4,13 +4,7 @@ This repository contains Python code for AWS Lambda functions designed for platf
 
 ## Files
 
-### `lambda_handler.py`
 
-This file contains the main Lambda handler function and helper functions for interacting with AWS services and external APIs. It is responsible for processing events, fetching parameters from AWS Systems Manager Parameter Store, authenticating with external services, making API requests, and handling errors.
-
-### `utils.py`
-
-This file contains utility functions used by the main Lambda handler function. These functions encapsulate common tasks such as making HTTP requests, logging messages, and sending notifications to external services like Google Chat.
 
 ## Deployment
 
