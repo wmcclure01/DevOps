@@ -6,7 +6,7 @@ http = urllib3.PoolManager()
 
 
 def lambda_handler(event, context):
-    url = "https://hooks.slack.com/services/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"
+    url = "https://hooks.slack.com/services/<HOOK>"
     msg = {
         "channel": "#tpt_alteryx_queue",
         "username": "Alteryx_Service",
