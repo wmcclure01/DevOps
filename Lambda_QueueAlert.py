@@ -17,7 +17,7 @@ from datetime import date, timedelta
 
 
 def authenticate():  
-    client = MongoClient('mongodb://user:9639C7C0E40760FC682049203E024022FC39750A@alteryx-mongo-1.oa.nlsn.media:27018/admin?connectTimeoutMS=10000&authSource=AlteryxService&authMechanism=SCRAM-SHA-1')
+    client = MongoClient('PASS')
     db = client.AlteryxService
     collection = db.AS_Queue
     start_of_day = date.today().strftime("%Y-%m-%d")
@@ -102,7 +102,7 @@ def queue_check(data):
     else:
         queue_results = 0
         
-    engine = create_engine('postgresql://wamcclur2001:Camplovers357$@media-ops-db.oa.nlsn.media:5432/servers')
+    engine = create_engine('postgresql:<PASS>')
 
     #running_jobs.to_sql('mongo_py_alert', engine,schema='usage', if_exists='replace',index=False)
       ##commented out print to correct for pass along to other functions
@@ -142,7 +142,7 @@ def send_slack_message(message: str):
         print("situation normal")
     else:
         payload = '{"text": "%s"}' %message
-        response = requests.post('https://hooks.slack.com/services/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',
+        response = requests.post('https://hooks.slack.com/services/<HOOKID>',
                              data = payload)
     
     
